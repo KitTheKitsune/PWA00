@@ -25,7 +25,7 @@
     "src":"images/hello-icon-196maskable.png",
     "sizes":"192x192",
     "type":"image/png",
-    "purpose": "any"
+    "purpose": "any maskable"
   },{
     "src":"images/hello-icon-256.png",
     "sizes":"256x256",
