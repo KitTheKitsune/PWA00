@@ -6,7 +6,7 @@ function regSW(){
 }
 
 function dcrypt(x){
-  return str.split("").reverse().join("");
+  return x.split("").reverse().join("");
 }
 
 const app = document.getElementById('root');
