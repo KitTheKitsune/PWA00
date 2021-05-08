@@ -27,7 +27,7 @@ request.send();
 request.onload = function(){
   var data = JSON.parse(this.response);
   console.log(data);
-  if (request.status>=200) && request.status<400){
+  if (request.status>=200 && request.status<400){
      const card = document.createElement('div');
      card.setAttribute('class','card');
     const h1 = document.createElement('h1');
