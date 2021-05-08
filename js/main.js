@@ -9,6 +9,14 @@ function dcrypt(x){
   return x.split("").reverse().join("");
 }
 
+function kToC(x){
+  return x - 273.15;
+}
+
+function kToF(x){
+  return (kToC(x) * 9)/5 + 32;
+}
+
 const app = document.getElementById('root');
 //const logo = document.createElement('img');
 //logo.src = 'images/logo.png';
@@ -20,9 +28,10 @@ container.setAttribute('class','container');
 app.appendChild(container);
 
 let request = new XMLHttpRequest();
-let city = "London";
+let city = ["London"];
 let api = dcrypt("1e5ae6831a0fa16012e92d525385e2f5");
-request.open('GET','https://api.openweathermap.org/data/2.5/weather?q='+ city +'&appid=' + api,true);
+
+request.open('GET','https://api.openweathermap.org/data/2.5/weather?q='+ city[0] +'&appid=' + api,true);
 request.send();
 request.onload = function(){
   var data = JSON.parse(this.response);
@@ -33,7 +42,7 @@ request.onload = function(){
     const h1 = document.createElement('h1');
     h1.textContent = data.name;
     const p = document.createElement('p');
-    p.textContent = data.main.temp;
+    p.textContent = kToF(data.main.temp) + " F";
     
     container.appendChild(card);
     card.appendChild(h1);
