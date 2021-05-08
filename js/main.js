@@ -38,11 +38,11 @@ function getCityData(city){
     var data = JSON.parse(this.response);
     console.log(data);
     if (request.status>=200 && request.status<400){
-       const card = document.createElement('div');
+       var card = document.createElement('div');
        card.setAttribute('class','card');
-      const h1 = document.createElement('h1');
+      var h1 = document.createElement('h1');
       h1.textContent = data.name;
-      const p = document.createElement('p');
+      var p = document.createElement('p');
       p.textContent = kToF(data.main.temp) + " F";
 
       container.appendChild(card);
