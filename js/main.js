@@ -38,8 +38,8 @@ function getCityData(city){
     var data = JSON.parse(this.response);
     console.log(data);
     if (request.status>=200 && request.status<400){
-       var card = document.createElement('div');
-       card.setAttribute('class','card');
+      var card = document.createElement('div');
+      card.setAttribute('class','card');
       var h1 = document.createElement('h1');
       h1.textContent = data.name;
       var p = document.createElement('p');
