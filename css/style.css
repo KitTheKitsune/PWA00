@@ -12,6 +12,11 @@ html,
 }
 
 /* center the content in the browser window*/
+.header {
+  margin:auto;
+  text-align:center;
+}
+
 .container {
   margin:auto;
   text-align:center;
