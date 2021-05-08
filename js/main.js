@@ -28,7 +28,7 @@ container.setAttribute('class','container');
 app.appendChild(container);
 
 let request = new XMLHttpRequest();
-let cities = ["London","France","Tokyo","NewYork"];
+let cities = ["London","France","Tokyo","Chicago"];
 let api = dcrypt("1e5ae6831a0fa16012e92d525385e2f5");
 
 function getCityData(city){
