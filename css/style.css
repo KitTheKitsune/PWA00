@@ -15,8 +15,33 @@ html,
 .container {
   margin:auto;
   text-align:center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .title{
   font-size: 3rem;
 }
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  margin:1rem;
+  border: 1px solid gray;
+}
+
+@media screen and (min-width 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2 rem);
+  }
+}
+
+@media screen and (min-width 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2 rem);
+  }
+}
+
